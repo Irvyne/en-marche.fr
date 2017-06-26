@@ -103,6 +103,8 @@ member_summary.language.level.medium: Bonne maîtrise
 member_summary.language.level.high: Maîtrise parfaite
 member_summary.language.level.fluent: Langue maternelle
 
+summary.competences.success: Les compétences ont bien été modifiées.
+
 #
 # Search
 #
