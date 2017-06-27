@@ -5,6 +5,7 @@ namespace Tests\AppBundle\Controller\EnMarche;
 use AppBundle\DataFixtures\ORM\LoadAdherentData;
 use AppBundle\DataFixtures\ORM\LoadSummaryData;
 use AppBundle\Entity\MemberSummary\Language;
+use AppBundle\Form\SummaryType;
 use AppBundle\Summary\Contract;
 use AppBundle\Summary\JobDuration;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,6 +26,10 @@ class SummaryManagerControllerTest extends SqliteWebTestCase
         yield 'Handle experience' => ['/espace-adherent/mon-cv/experience'];
         yield 'Handle training' => ['/espace-adherent/mon-cv/formation'];
         yield 'Handle language' => ['/espace-adherent/mon-cv/langue'];
+
+        foreach (SummaryType::STEPS as $step) {
+            yield 'Handle step '.$step => ['/espace-adherent/mon-cv/'.$step];
+        }
     }
 
     /**
