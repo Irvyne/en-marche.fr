@@ -68,7 +68,7 @@ class Summary
      *
      * @ORM\Column(type="simple_array", nullable=true)
      *
-     * @Assert\Count(min=1)
+     * @Assert\Count(min=1, groups={"synthese"})
      */
     private $availabilities = [];
 
@@ -114,7 +114,7 @@ class Summary
      *
      * @ORM\Column(type="text")
      *
-     * @Assert\NotBlank
+     * @Assert\NotBlank(groups={"motivation"})
      * @Assert\Length(min=10, max=300, groups={"motivation"})
      */
     private $motivation = '';
