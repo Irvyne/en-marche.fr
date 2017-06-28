@@ -137,7 +137,7 @@ class Summary
     /**
      * @var Skill[]|Collection
      *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\MemberSummary\Skill", mappedBy="summary", indexBy="id", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\MemberSummary\Skill", mappedBy="summary", cascade={"all"}, orphanRemoval=true)
      *
      * @Assert\Valid
      * @Assert\Count(min=1, groups={"competences"})

@@ -27,7 +27,7 @@ class SkillRepository extends EntityRepository
             ->andWhere('summary.member != :member')
             ->andWhere($qb->expr()->notIn('s.name', $qbUserSkills->getDQL()))
             ->setParameters([
-                'name' => '%'.$term.'%',
+                'name' => $term.'%',
                 'member' => $user,
                 'user' => $user,
             ])

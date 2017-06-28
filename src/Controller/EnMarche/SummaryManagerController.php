@@ -216,7 +216,7 @@ class SummaryManagerController extends Controller
 
         if ($form->handleRequest($request)->isSubmitted() && $form->isValid()) {
             $this->get(SummaryManager::class)->updateSummary($summary);
-            $this->addFlash('info', 'summary.'.step.'.success');
+            $this->addFlash('info', 'summary.step.success');
 
             return $this->redirectToRoute('app_summary_manager_index');
         }
