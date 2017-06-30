@@ -6,6 +6,7 @@ use AppBundle\Controller\CanaryControllerTrait;
 use AppBundle\Controller\EntityControllerTrait;
 use AppBundle\Entity\MemberSummary\JobExperience;
 use AppBundle\Entity\MemberSummary\Language;
+use AppBundle\Entity\Summary;
 use AppBundle\Entity\MemberSummary\Training;
 use AppBundle\Form\JobExperienceType;
 use AppBundle\Form\LanguageType;
